@@ -1,0 +1,5 @@
+.notation{font:15px/1.7 ui-monospace,Consolas,monospace;color:#175d4c;background:#eaf0e4;padding:8px 12px}.notation-note{border-left:3px solid #d87536;background:#fff2da;padding:10px 14px}.related-links{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}.related-links a{font-size:13px;color:#175d4c;text-underline-offset:3px}.related-links a:focus-visible{outline:3px solid #e19a64;outline-offset:3px}#concept-check{background:#edf2e8;padding:14px;margin:20px 0}#concept-check summary{font-weight:650}#concept-check select{width:100%;min-width:0;margin-bottom:15px}#concept-feedback{font-size:14px}#definition-scope{min-width:0;width:100%}#concept-tableau table{font-size:13px}#concept-tableau th,#concept-tableau td{min-width:60px;padding:8px}
+
+.variable-question{margin-top:18px}.variable-prep select{min-width:0;width:100%;max-width:100%}.variable-prep .invalid{border:2px solid #a84828}
+
+.operation-cell{min-width:190px}.operation-cell textarea{width:190px;font:14px/1.5 ui-monospace,Consolas,monospace;resize:vertical;text-align:left}

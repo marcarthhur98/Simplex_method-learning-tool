@@ -1,0 +1,8 @@
+node_modules/
+.env
+.env.*
+*.log
+*.pdf
+*.pptx
+*.py
+*session*.json

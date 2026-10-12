@@ -1,0 +1,38 @@
+/* Give calculations the full screen width; keep supporting notes below them. */
+main{max-width:none;padding-left:clamp(12px,2vw,36px);padding-right:clamp(12px,2vw,36px)}
+.layout{grid-template-columns:minmax(0,1fr)}
+aside{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px}
+.table-scroll{max-width:100%;overflow:visible}
+table{width:100%;table-layout:fixed}
+th,td{min-width:0;padding:10px 6px;overflow-wrap:anywhere}
+td input,#activities td input{width:100%;min-width:0;max-width:100%;padding:8px 4px!important}
+.operation-cell{min-width:0;width:20%}
+.operation-cell textarea{width:100%;min-width:0;max-width:100%}
+.operation-apply{max-width:100%;padding:8px;font-size:12px}
+.operation-status{font-size:12px}
+.tableau-snapshot{margin:24px 0}
+.pivot-comparison{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:18px;align-items:start;scroll-margin-top:16px}
+.pivot-reference,.pivot-editor{min-width:0;padding:12px;background:#edf2e8;border:1px solid var(--line);border-radius:5px}
+.pivot-reference{position:sticky;top:16px}
+.pivot-comparison h3{font-size:16px;margin:0 0 10px}
+.pivot-reference select{width:100%;min-width:0;font-size:13px;padding:6px}
+.pivot-comparison table{font-size:12px}
+.pivot-comparison th,.pivot-comparison td{padding:6px 3px}
+.pivot-comparison td input,#activities .pivot-comparison td input{font-size:12px;padding:5px 2px!important}
+.pivot-comparison .operation-cell textarea{font-size:12px;padding:5px;min-height:48px}
+.pivot-comparison .operation-apply{padding:4px;font-size:11px}
+.pivot-comparison .caption{font-size:12px;margin:8px 0}
+@media(max-width:1100px){.pivot-comparison{grid-template-columns:1fr}.pivot-reference{position:static}}
+@media(max-width:700px){
+ aside{grid-template-columns:1fr}
+ /* On narrow screens present each row as labelled cells, rather than scrolling. */
+ .workspace table{display:block;table-layout:auto;background:transparent}
+ .workspace table thead{display:none}
+ .workspace table tbody{display:block}
+ .workspace table tbody tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:14px 0;padding:12px;background:#edf2e8;border:1px solid var(--line)}
+ .workspace table tbody tr>th{grid-column:1/-1;text-align:left;padding:6px;border:0}
+ .workspace table td{display:block;border:0;background:white;padding:8px;text-align:left}
+ .workspace table td::before{content:attr(data-column-label);display:block;font:600 12px/1.5 system-ui;color:var(--muted);margin-bottom:6px}
+ .workspace table td.operation-cell{grid-column:1/-1;width:auto}
+ .workspace table td input{text-align:left}
+}
