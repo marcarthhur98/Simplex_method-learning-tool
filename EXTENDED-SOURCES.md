@@ -13,8 +13,6 @@ Only the uploaded course materials supply educational content. References below 
 | Zero basic artificial cleanup | Same lecture, PDF p. 25; region Python above | Labelled adaptation adds x1+x2=4 to the region. Feasible set changes. Valid non-artificial cleanup pivots accepted |
 | Infeasible model | 1.3 - Linear Programming - blanks filled.pdf, PDF pp. 13–14 | Lecture cupcake minimum x2≥17 combined with baking resource bounds; artificial-variable presentation |
 | Ratio and degeneracy evidence | Simplex Tableau review.pptx, slides 7–9 | Strictly positive pivot-column eligibility, zero ratio, tied minima and basic zeros |
-| Matrix form | 4.1 - Tableau in Matrix Form.pdf, PDF pp. 7–17 | Landscaping B, inverse, xB, y and row-0 reconstruction |
-| Revised simplex | 4.2 -Revised Simplex.pdf, PDF pp. 3–24; inverse update pp. 13–15 | Same landscaping model; direction, ratios, eta/update matrix and repeated basis updates |
 | Dual construction / bounds | 3.3 - Introduction to Sensitivity and Duality.pdf, PDF pp. 22–30 | Landscaping dual; weak-duality interpretation |
 | Feasible-pair example | primal_dual_explorer.py, initial points in __init__, status routines lines 316–325 | Original default baking x=(6,4), y=(15,10); exact recalculation of slacks, gap and products |
 | Dual certificates / complementarity | 4.3 -Duality and Sensitivity Revisted.pdf, PDF pp. 3–13, 24 | Both feasibilities required; basis-derived objective equality alone is insufficient |
@@ -25,7 +23,6 @@ The textbook contents and index were consulted again before locating the RHS-nor
 
 ## Conventions and boundaries
 
-Row 0 uses cBᵀB⁻¹A−cᵀ. A negative nonbasic coefficient improves a max objective; a positive one improves a min objective. A min tableau stops with nonpositive coefficients; max stops with nonnegative coefficients. This is the lecture convention; the glossary flags the textbook's opposite reduced-cost sign. Basic row-0 coefficients must first be eliminated. Ratio eligibility requires a strictly positive transformed entry; zero ratios and tied minima are accepted.
 
 Big M penalises artificials with +M for minimisation and −M for maximisation. A completed optimum with positive artificial sum proves original infeasibility. Phase I minimises the artificial sum; zero permits original feasibility, followed by cleanup and restoration of Z. The tutorial's negative-sum maximisation is labelled in the definitions.
 
@@ -42,3 +39,5 @@ See TEXTBOOK-SOURCES.md for the new 22-model bank, minimum five-problem coverage
 A separate Formulate & solve the dual topic now derives the dual from existing source-bank primal data, then uses two-phase simplex on the dual itself. This is ordinary simplex applied to the dual LP, not the distinct dual-simplex algorithm. It preserves y variable names throughout both phases. Original model coefficients are not changed; transpose, RHS/objective exchange and ≥ relations follow the uploaded lecture construction in 3.3 - Introduction to Sensitivity and Duality.pdf, PDF pp. 22–30. Two-phase construction and transition follow 3.2 - Non-standard LPs.pdf, PDF pp. 24–39. Each task includes its model reference, explicitly describes the adaptation, and supplies these lecture method references. Textbook model locators retain printed/PDF distinctions from TEXTBOOK-SOURCES.md; no new textbook passage search was needed.
 
 Source models: Giapetto, leather production, §4.5 problems 2 and 5, Dakota (existing five standard textbook models), plus lecture landscaping and baking. Scope: max ≤ primal with x≥0. The new topic does not infer unsupported sign rules for other primal families.
+
+Tableau and simultaneous-equation update: duality and sensitivity use original slack-column readings, scalar binding equations, feasibility checks and objective equality. The playground offers Graph, Pivot explorer and Tableau / equations. No additional textbook search was needed: the existing contents/index locators were reused. Lecture 3.3 PDF pp. 12–15, 22–30; textbook §6.5 printed pp. 295–301 / PDF pp. 311–317 and §6.10 printed pp. 325–328 / PDF pp. 341–344. RHS exercises adapt §6.3 printed pp. 275–287 / PDF pp. 291–303. Original model coefficients are unchanged.

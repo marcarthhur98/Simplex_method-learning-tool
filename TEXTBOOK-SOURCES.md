@@ -4,7 +4,6 @@ Source: the uploaded Operational-Research-Winston-Wayne.pdf (Winston, fourth edi
 
 ## Navigation and page numbering
 
-The contents (PDF pp. 5–11) and subject index (PDF pp. 1418–1434) were consulted before extracting relevant sections. Routes: §§3.1–3.3 for formulations/special cases, §§4.1/4.5/4.7/4.11–4.13 and Chapter 4 review for simplex, §§6.2/6.3/6.5/6.10 for matrix, sensitivity and duality, and §10.1 for revised simplex. Selected passages were read; the entire textbook was not repeatedly scanned. Printed page and one-based PDF viewer page are stored separately. The +16 offset was checked against the selected section headings and rendered pages.
 
 Original exercise text has been paraphrased concisely. Models retain their original numbers, relations, objective sense and variable order. Narratives fix source variable units so exact algebra can be graded. The implementation adds guided questions, drills and evidence checks. Where a model is used in another method, that is a labelled method adaptation, not an assertion that the textbook posed that exact extra question.
 
@@ -19,8 +18,6 @@ Original exercise text has been paraphrased concisely. Models retain their origi
 | Two-phase and transition | 8 | Same eight models; §4.13 problem 1 explicitly assigns §4.12 problems |
 | Infeasibility | 5 | §4.12 problem 4; §3.3 problems 1 and 8; Chapter 4 review problems 6 and 9 |
 | Special cases | 5 | §4.7 problems 2, 4 and 5; §4.11 problem 1; Chapter 4 review problem 4 |
-| Matrix form | 5 | Five standard models; supplied first-pivot basis for a nontrivial inverse |
-| Revised simplex | 5 | Five standard models; repeat from their original slack bases |
 | Duality | 5 | Five standard models; dual construction, slacks, feasible certificates and gap |
 | Sensitivity | 5 | Five standard models; first-RHS direction, allowable interval, basic values and shadow price |
 
@@ -57,8 +54,6 @@ There are **22 distinct LPs**, reused across appropriate methods. Counts above a
 
 - Transformations and artificial starting bases: §§4.1 and 4.12, printed pp. 127–130 and 172–178 / PDF pp. 143–146 and 188–194.
 - Phase I/II and the instruction to reuse §4.12 exercises: §4.13, printed pp. 178–184 / PDF pp. 194–200. The lab preserves its full editable Phase II transition and lecture cleanup rules.
-- Matrix reconstruction: §6.2, printed pp. 267–274 / PDF pp. 283–290. Matrix exercises use a supplied basis after one exact valid pivot; this basis/context is an implementation adaptation and does not alter the LP.
-- Revised direction and inverse update: §10.1, printed pp. 562–567 / PDF pp. 578–583; uploaded lecture 4.2 conventions continue to govern entering choices, tied ratios and update notation.
 - Dual construction: §6.5, printed pp. 295–301 / PDF pp. 311–317; certificate and complementary-slackness interpretation: §6.10, printed pp. 325–328 / PDF pp. 341–344.
 - Single-RHS sensitivity: §6.3, printed pp. 275–288 / PDF pp. 291–304. The extra Δ checks are calculated from each original LP; no resource quantity or objective coefficient has been invented. N/A means an endpoint has no finite bound.
 - Special-case evidence: §§4.7 and 4.11, printed pp. 153–155 and 168–172 / PDF pp. 169–171 and 184–188.
@@ -71,3 +66,5 @@ Each original LP was solved with both exact Big M and exact two-phase calculatio
 
 The independent algebra editor supports up to 12 fixed source variables, bounded linear sums, exact fractions/decimals, reordered constraints and equivalent row scalings. It does not grade prose definitions or arbitrary algebraic redundancy. Sensitivity additions cover a single first-resource RHS change; unrestricted-parameter sensitivity and new methods are outside this update. The unrestricted-variable lecture exercise remains available but is not counted among the new eight textbook transformation models.
 
+
+Tableau and simultaneous-equation update: duality and sensitivity use original slack-column readings, scalar binding equations, feasibility checks and objective equality. The playground offers Graph, Pivot explorer and Tableau / equations. No additional textbook search was needed: the existing contents/index locators were reused. Lecture 3.3 PDF pp. 12–15, 22–30; textbook §6.5 printed pp. 295–301 / PDF pp. 311–317 and §6.10 printed pp. 325–328 / PDF pp. 341–344. RHS exercises adapt §6.3 printed pp. 275–287 / PDF pp. 291–303. Original model coefficients are unchanged.

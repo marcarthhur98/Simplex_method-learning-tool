@@ -13,7 +13,7 @@
   const t=$('topic').value,e=$('example').value;let rs,src=source,dec='The original x1 and x2: what role do they have?';
   if(['big','two'].includes(t)){rs=AdvancedContent.models.find(p=>p.id===e).relations}
   else if(t==='transform'){rs=e==='mixed'?['<=','>=','=']:['<=','<=',...(e==='free'?['<=']:[])];if(e==='forest')src={file:source.file,locator:'PDF pp. 4–8'};if(e==='free')src={file:source.file,locator:'PDF pp. 41–43'}}
-  else{rs=t==='dual'&&e!=='construct'?['<=','<=']:['<=','<=','<=','<='];src={file:rs.length===2?'2.2 - Simplex Tableau.pdf':'4.1 - Tableau in Matrix Form.pdf',locator:rs.length===2?'PDF pp. 8–12':'PDF pp. 3–8'};dec+=' (Classify the original primal model.)'}
+  else{rs=t==='dual'&&e!=='construct'?['<=','<=']:['<=','<=','<=','<='];src={file:rs.length===2?'2.2 - Simplex Tableau.pdf':'3.3 - Introduction to Sensitivity and Duality.pdf',locator:rs.length===2?'PDF pp. 8–12':'PDF pp. 12–15'};dec+=' (Classify the original primal model.)'}
   const list=[row(dec,'decision','x1 and x2 are the original nonnegative activity decisions; auxiliary variables are introduced separately.',src),...rs.map((r,i)=>constraint(r,i,src))];
   if(t==='transform'&&e==='free')list.push(row('Electricity transfer y may be positive or negative. How is it represented for simplex?','split','Use y=y+−y− with both parts nonnegative. Recover the physical transfer from their difference.',src));
   if(['big','two'].includes(t)||t==='transform'&&e==='mixed')list.push(row('An artificial variable is introduced. What is its role?', 'start','It supplies a starting basic column in the augmented problem. It is not unused resource; original feasibility requires artificial values to reach zero.',source));
